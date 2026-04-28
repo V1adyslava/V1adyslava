@@ -5,3 +5,8 @@ venv/
 .env
 *.png
 !preview.png
+exports/
+*.xlsx
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
