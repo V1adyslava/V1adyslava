@@ -14,8 +14,7 @@
  *   6. Paste that URL into curator-feedback/config.js → CONFIG.WEB_APP_URL.
  */
 
-// ⚠️ EDIT THIS — paste your Google Sheet ID:
-var SHEET_ID = "PASTE_YOUR_SHEET_ID_HERE";
+var SHEET_ID = "13x1jcv5J2SgYZqxsc-b71eZFJvFRL-pAncFmAZ8bNP0";
 
 // Tab name where rows will be appended. Created automatically if missing.
 var SHEET_NAME = "Feedback";
