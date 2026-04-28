@@ -2,5 +2,5 @@
 // (see README.md → "Setup"). Until you do, submissions will fail.
 window.CONFIG = {
   WEB_APP_URL:
-    "https://script.google.com/macros/s/AKfycbykGxJoQaMp28IgxIyw4YdUPK9aYFOzWBvgdNZ0tc0RQ764nZoaO-ePIUAgS4hPsGkw/exec",
+    "https://script.google.com/macros/s/AKfycbydRmLZlF-DKRgX_U1RaxsM9SjTCnl7ZjTlhXMCVvRHO9DFQF6Nu8I5nC2J81MI-4CD/exec",
 };
