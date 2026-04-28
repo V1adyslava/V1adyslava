@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Curator Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Curator Feedback</h1>
+      <p class="hero-sub">
+        Streams 1, 2 &amp; 3 — Please share your observations about each
+        student's progress during the course.
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- STEP 1 — choose curator -->
+      <section id="step-1" class="step" aria-labelledby="step-1-title">
+        <p class="step-label">Step 1 of 2</p>
+        <div class="card">
+          <h2 id="step-1-title">Select your name</h2>
+          <p class="muted">
+            Choose your name from the list below to see your group's students.
+          </p>
+
+          <label for="curator-select" class="visually-hidden"
+            >Curator</label
+          >
+          <div class="select-wrapper">
+            <select id="curator-select" required>
+              <option value="" disabled selected>Choose your name…</option>
+            </select>
+          </div>
+
+          <button id="continue-btn" class="btn btn-primary" type="button">
+            Continue →
+          </button>
+        </div>
+      </section>
+
+      <!-- STEP 2 — feedback per student -->
+      <section
+        id="step-2"
+        class="step hidden"
+        aria-labelledby="step-2-title"
+      >
+        <div class="curator-chip" id="curator-chip">
+          <span class="chip-icon">✦</span>
+          <span id="chip-text"></span>
+        </div>
+
+        <div class="card">
+          <h2 id="step-2-title">Student Feedback</h2>
+          <p class="muted">
+            For each student, describe the changes and progress you observed
+            during the training. All fields are optional.
+          </p>
+        </div>
+
+        <div class="progress-row">
+          <button id="back-btn" type="button" class="btn-link">
+            ← Change curator
+          </button>
+          <span class="progress-text" id="progress-text"></span>
+        </div>
+
+        <form id="students-form" novalidate>
+          <div id="students-list"></div>
+
+          <div class="submit-row">
+            <button id="submit-btn" type="submit" class="btn btn-primary">
+              Submit feedback
+            </button>
+            <p class="muted small" id="submit-help">
+              You can submit only once. Make sure everything looks good before
+              sending.
+            </p>
+          </div>
+        </form>
+      </section>
+
+      <!-- DONE -->
+      <section id="step-done" class="step hidden" aria-live="polite">
+        <div class="card card-done">
+          <h2>Thank you 🌿</h2>
+          <p class="muted">
+            Your feedback has been submitted. You can close this page.
+          </p>
+        </div>
+      </section>
+
+      <!-- ALREADY SUBMITTED -->
+      <section id="step-locked" class="step hidden">
+        <div class="card card-done">
+          <h2>Feedback already sent</h2>
+          <p class="muted" id="locked-text"></p>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast hidden" role="alert"></div>
+
+    <script src="config.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
